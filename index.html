@@ -1,0 +1,230 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Peculiar a Personal Portfolio Flat Bootstarp responsive Website Template| HOME :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Peculiar Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<script src="js/jquery-1.11.0.min.js"></script>
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+
+<!--start-smoth-scrolling-->
+<!--animated-css-->
+		<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+		<script src="js/wow.min.js"></script>
+		<script>
+		 new WOW().init();
+		</script>
+<!--animated-css-->  
+</head>
+<body>
+	<!--start-banner-->
+		<div class="banner" id="home">
+			<div  id="top" class="callbacks_container">
+			     <ul class="rslides" id="slider4">
+			       <li>
+	    				<div class="banner-1">
+						</div>
+					</li>
+					 <li>
+	    				<div class="banner-2">
+						</div>
+					</li>
+			     </ul>
+			</div>
+			<div class="clearfix"> </div>
+			<div class="header">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt=""></a>
+				</div>
+				<div class="navigation">
+				 <span class="menu"></span> 
+					<ul class="navig">
+						<li><a href="index.html" class="scroll">主页</a><span>|</span></li>
+						<li><a href="#contact" class="scroll">联系我们</a></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="banner-bottom">
+				<ul>
+					<li><a href="#"><span class="twt"> </span></a></li>
+					<li><a href="#"><span class="t"> </span></a></li>
+					<li><a href="#"><span class="g"> </span></a></li>
+				</ul>
+			</div>
+		</div>	
+	<!-- script-for-menu -->
+		 <script>
+				$("span.menu").click(function(){
+					$(" ul.navig").slideToggle("slow" , function(){
+					});
+				});
+		 </script>
+		 <!-- script-for-menu -->
+		<!--Slider-Starts-Here-->
+				<script src="js/responsiveslides.min.js"></script>
+			 <script>
+			    // You can also use "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 4
+			      $("#slider4").responsiveSlides({
+			        auto: true,
+			        pager: false,
+			        nav: true,
+			        speed: 500,
+			        namespace: "callbacks",
+			        before: function () {
+			          $('.events').append("<li>before event fired.</li>");
+			        },
+			        after: function () {
+			          $('.events').append("<li>after event fired.</li>");
+			        }
+			      });
+			
+			    });
+			  </script>
+			<!--End-slider-script-->
+	<!--end-banner-->	
+	<!--start-free-->	 
+	<div class="free wow bounce" data-wow-delay="0.1s">
+		<div class="container">
+			<div class="free-main">
+				<h1>每个人的心中，都有一个正在旅行的自己</h1>
+				<p><sup><img src="images/quote-1.png" alt=""></sup>何为旅行？旅行不是一次出行，也不只是一个假期。旅行是一个过程，一次发现,真正的旅行让我们直面自我。旅行不仅让我们看到世界，更让我们看到自己在其中的位置。究竟，是我们创造了旅行。还是旅行造就了我们？生命本身就是一场旅行。<sub><img src="images/quote-2.png" alt=""></sub> </p>
+			</div>
+		</div>
+	</div>
+	<!--end-free-->	 
+	<!-- Portfolio Starts Here -->
+<link rel="stylesheet" href="css/swipebox.css">
+	<script src="js/jquery.swipebox.min.js"></script> 
+	    <script type="text/javascript">
+			jQuery(function($) {
+				$(".swipebox").swipebox();
+			});
+		</script>
+	<!-- Portfolio Ends Here -->
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+<script type="text/javascript">
+$(function () {
+	
+	var filterList = {
+	
+		init: function () {
+		
+			// MixItUp plugin
+		// http://mixitup.io
+		$('#portfoliolist').mixitup({
+			targetSelector: '.portfolio',
+			filterSelector: '.filter',
+			effects: ['fade'],
+			easing: 'snap',
+			// call the hover effect
+			onMixEnd: filterList.hoverEffect()
+		});				
+	
+	},
+	
+	hoverEffect: function () {
+	
+		// Simple parallax effect
+		$('#portfoliolist .portfolio').hover(
+			function () {
+				$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+				$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+			},
+			function () {
+				$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+				$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+			}		
+		);				
+	
+	}
+
+};
+
+// Run the show!
+	filterList.init();
+	
+});	
+</script>
+<!--Contact-Starts-Here-->
+	<div class="contact" id="contact">
+		<div class="container">
+			<div class="contact-main">
+				<div class="col-md-6 contact-left wow bounceInLeft" data-wow-delay="0.4s">
+					<h3>Contact Us</h3>
+					<p>因为喜欢绿色，所以就莫名的喜欢上了旅游，此生最大的梦想就是游遍自己所有想去的地方，不管有多远，不管有多久都会带着梦想前行。</p>
+<p>也不管是因为一部电影或者是电视剧的情绪，或者是一篇文章，一篇小说的情结，再或者是另外的一些什么，都会想要去那样的地方，不为别的，只为去看看，了解自己的莫名心愿。那些魂牵梦萦的思念总是会时不时的浮现在自己的眼前。北京的香山红叶，那是儿时书本里读到的最美的地方，天安门广场，那是像征国家庄严的地方;海南的天涯海角，那是爱情的永远;想看蔚蓝的大海，只因为自己生活在内陆地区，从来没有见过海，所以看到大海也是一直以来的梦想……还有法国的普罗旺斯，开满熏衣草的花田;马尔代夫的星星海，用声音来聆听海的音乐……这些所有的所有，虽然自己目前已经去过的地方还是很少，但是我相信不久的将来我一定会去的。</p>
+                    <ul>
+						<li><p><a href="mailto:zhoupans_mail@163.com"> E: zhoupans_mail@163.com </a></p></li>
+						<li><p>Q:<a href="#">1501714323</a></p></li>
+					</ul>
+				</div>
+				<div class="col-md-6 contact-left wow bounceInRight" data-wow-delay="0.4s">
+					<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}"/>
+					<input type="text" value="Email address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email address';}"/>
+					<div class="contact-textarea">
+						<textarea value="Your question" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your question';}">Your question</textarea>
+					</div>
+					<div class="contact-but">
+						<input type="submit" value="SEND" />
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+<!--Contact-Ends-Here-->
+<!--Footer-Starts-Here-->
+	<div class="footer">
+		<div class="conatiner">
+			<div class="footer-text wow bounce" data-wow-delay="0.1s">
+				<ul>
+					<li><a href="#"><span class="twt"> </span></a></li>
+					<li><a href="#"><span class="t"> </span></a></li>
+					<li><a href="#"><span class="g"> </span></a></li>
+				</ul>
+			</div>
+		</div>
+		 <script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	</div>
+<!--Footer-Ends-Here-->
+</body>
+</html>
